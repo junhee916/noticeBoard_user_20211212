@@ -1,3 +1,5 @@
+const userModel = require('../model/user')
+const jwt = require('jsonwebtoken')
 const userController = {}
 userController.getAll = async (req, res) => {
     try{
@@ -62,8 +64,6 @@ userController.get = async (req, res) => {
         })
     }
 };
-const userModel = require('../model/user')
-const jwt = require('jsonwebtoken')
 userController.signup = async (req, res) => {
     const {name, email, password} = req.body
     try{
